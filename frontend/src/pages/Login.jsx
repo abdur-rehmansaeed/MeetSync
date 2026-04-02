@@ -11,10 +11,8 @@ const Login = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Login</h2>
       <button type="submit">Login</button>
     </form>
   );
 };
-
 export default Login;
