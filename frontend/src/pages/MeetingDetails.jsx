@@ -11,8 +11,6 @@ const MeetingDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [editing, setEditing] = useState(false);
-
-  // Edit state
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
   const [notes, setNotes] = useState('');
