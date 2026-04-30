@@ -4,11 +4,19 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 
 dotenv.config();
+
 connectDB();
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
+
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/meetings', require('./routes/meetingRoutes'));
+app.use('/api/tasks', require('./routes/taskRoutes'));
+app.use('/api/dashboard', require('./routes/dashboardRoutes'));
 
 app.get('/', (req, res) => {
   res.json({ message: 'MeetSync API is running' });
